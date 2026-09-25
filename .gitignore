@@ -1,0 +1,40 @@
+# Dependencies
+node_modules/
+
+# Next.js build output
+.next/
+out/
+
+# Cloudflare / OpenNext build output
+.open-next/
+.wrangler/
+workers/
+
+# Environment & secrets (never commit)
+.env
+.env*.local
+.env.production
+*.pem
+*.key
+
+# Local databases & logs
+*.db
+*.sqlite
+*.log
+pg.log
+pg.err
+npm-debug.log*
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/extensions.json
+.idea/
+
+# Test / coverage artifacts
+coverage/
+vitest.config.*.timestamp*
+
+# Misc
+*.tsbuildinfo

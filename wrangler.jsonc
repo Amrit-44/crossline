@@ -1,0 +1,17 @@
+{
+  "$schema": "https://developers.cloudflare.com/workers/wrangler/configuration-schema.json",
+  "name": "crossline-realtime",
+  "compatibility_date": "2026-09-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "main": "worker/src/index.ts",
+  "dev": { "port": 8787 },
+  "durable_objects": {
+    "bindings": [{ "name": "CROSSLINE_ROOMS", "class_name": "CrosslineRoom" }]
+  },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["CrosslineRoom"] }],
+  "vars": {
+    "NEXT_PUBLIC_SITE_URL": "https://cross-line.pages.dev",
+    "ALLOWED_ORIGINS": "https://cross-line.pages.dev,http://localhost:3000,http://127.0.0.1:3000"
+  },
+  "observability": { "enabled": true }
+}
